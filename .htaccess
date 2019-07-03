@@ -1,0 +1,8 @@
+# check it is on
+RewriteEngine on 
+# as long as it is not a file
+RewriteCond %{REQUEST_FILENAME} !-f
+# as long as it is not a repertoir
+RewriteCond %{REQUEST_FILENAME} !-d 
+# Regex (all addresses) go to index.php
+RewriteRule ^.*$ index.php [L,QSA]  
